@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created';
   serverName = 'Test Server';
   serverCreated = false;
+  servers = ['Testserver', 'Testserver 2'];
   constructor() {
   //called first time before the ngOnInit()
   /*  Normally we use constructor to define/initialize some variables and dependency injection, 
@@ -29,6 +30,7 @@ export class ServersComponent implements OnInit {
   onCreateServer() {
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
     this.serverCreated = true;
+    this.servers.push(this.serverName);
   }
 
   onUpdateServerName(event: Event) {
