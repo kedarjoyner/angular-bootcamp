@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-
-  constructor() { }
-
+  allowNewServer = false;
+  constructor() {
+  /* A constructor is a method executed at the point 
+   * of time this component is created by Angular 
+  */
+  setTimeout(() => {
+    this.allowNewServer = true;
+  }, 2000);
+}
   ngOnInit() {
   }
 
