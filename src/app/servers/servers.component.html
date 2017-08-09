@@ -1,10 +1,12 @@
 <!-- pass allowNewServer function to the disabled attribute -->
 <label>Server Name</label>
 <!-- $event will be the data omitted with that event -->
-<input 
+<!-- <input 
     type="text"
     class="form-control"
-    (input)="onUpdateServerName($event)">
+    (input)="onUpdateServerName($event)"> -->
+    <input type="text" class="form-control"
+    [(ngModel)]="serverName">
     <p>{{ serverName }} </p>
 <button 
     class="btn btn-primary" 

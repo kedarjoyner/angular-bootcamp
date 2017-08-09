@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created';
-  serverName = '';
+  serverName = 'Test Server';
   constructor() {
   //called first time before the ngOnInit()
   /*  Normally we use constructor to define/initialize some variables and dependency injection, 
