@@ -1,1 +1,37 @@
 <!--The content below is only a placeholder and can be replaced.-->
+ <div class='container'>
+    <h1>Assignment #3: Practice Directives</h1>
+    <ol>
+        <li>Add a button which says 'Display Details'</li>  <!-- complete -->
+        <li>Add a paragraph with any content of your choice (e.g. 'Secret Password = tuna')</li> <!-- complete -->
+        <li>Toggle the displaying of that paragraph with the button created in the first step</li> <!-- complete -->
+        <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply
+            an incrementing number)</li> <!-- complete -->
+        <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
+    </ol>
+    <hr> 
+
+    <button class="btn btn-primary" (click)="displayClicks()">Display Details</button>
+    <div class="quote">
+        <p *ngIf="showHide">"I have a lot of growing up to do. I realized that the other day inside my fort."</p>
+    </div>
+
+    <div class="text-center">
+            <h4>Click Count:</h4>
+                <div *ngFor="let click of clicks">
+                    <p [ngClass]="{'log-color': click >= 5 }"> {{ click }} </p>
+            </div> 
+    </div>
+
+</div> 
+
+ <style>
+    p {
+        margin-top: 1.5rem;
+    }
+
+    .log-color {
+        background-color: blue;
+        color: white;
+    }
+</style> 
