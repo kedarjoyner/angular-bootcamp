@@ -1,6 +1,17 @@
 <!-- pass allowNewServer function to the disabled attribute -->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>  
+<label>Server Name</label>
+<!-- $event will be the data omitted with that event -->
+<input 
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+    <p>{{ serverName }} </p>
+<button 
+    class="btn btn-primary" 
+    [disabled]="!allowNewServer" 
+    (click)="onCreateServer()">Add Server</button>  
 <p> {{ allowNewServer }} </p>
-<p [innerText]="allowNewServer"></p>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
