@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 @Component({
     // html tag needed to use Component in other templates
     selector: 'app-server',
-    templateUrl: './server.component.html'
+    templateUrl: './server.component.html',
+    styles: [`
+        .online {
+            color: white;
+            }`
+    ]
 })
 
 export class ServerComponent {

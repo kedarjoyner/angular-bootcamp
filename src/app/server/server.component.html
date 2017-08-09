@@ -1,3 +1,4 @@
 <!-- <p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p> -->
 <!-- brackets indicated binding to a property of this directive -->
-<p [ngStyle]='{backgroundColor: getColor()}'>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
+<!-- ngClass takes a js object of key/value pairs. key is the class name and the value are the binding conditions -->
+<p [ngStyle]='{backgroundColor: getColor()}' [ngClass]="{online: serverStatus === 'online'}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
