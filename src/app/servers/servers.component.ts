@@ -9,6 +9,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created';
   serverName = 'Test Server';
+  serverCreated = false;
   constructor() {
   //called first time before the ngOnInit()
   /*  Normally we use constructor to define/initialize some variables and dependency injection, 
@@ -27,6 +28,7 @@ export class ServersComponent implements OnInit {
   // method
   onCreateServer() {
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
+    this.serverCreated = true;
   }
 
   onUpdateServerName(event: Event) {
